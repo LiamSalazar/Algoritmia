@@ -13,10 +13,15 @@ for _ in range(testcases):
             return
         pivot = max(array)
         dict[pivot] = count
-        count+=1
-        maximo(array[:pivot],count)
-        maximo(array[pivot:], count)
+        i = array.index(pivot)
+        maximo(array[:i],count+1)
+        maximo(array[i+1:], count+1)
     
     maximo(array, count)
-    print(dict)
+    i = 0
+    for v in dict.values():
+        if i == len(dict):
+            print(v)
+        else:
+            print(v, end=" ")
 
