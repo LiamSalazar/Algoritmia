@@ -26,5 +26,4 @@ for _ in range(testcases):
         print("YES")
         # (?(?)) = YES - > ((())) 
         #((?))) = YES -> ((())))
-        # ())(()
-
+        #())(() = NO 
